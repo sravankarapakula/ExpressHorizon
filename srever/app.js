@@ -20,6 +20,8 @@ app.get('/api/news', async (req, res) => {
       params: {
         country: 'us', // Change the country as needed
         apiKey: NEWS_API_KEY,
+        pageSize: 100, // Increase the number of articles per request
+        page: 1,
       },
     });
     res.json(response.data.articles);
@@ -33,3 +35,4 @@ app.get('/api/news', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
