@@ -29,6 +29,15 @@ body {
   color: #61DAFB; /* Light cyan */
 }
 
+/* Tagline styles */
+.tagline {
+  font-size: 1.2rem;
+  color: #D1D5DB; /* Soft gray */
+  margin-top: 10px;
+  font-style: italic;
+  font-family: 'Arial', sans-serif;
+}
+
 /* Main content styles */
 main {
   padding: 20px;
@@ -113,3 +122,83 @@ main {
   margin: 0;
   font-size: 0.9rem;
 }
+
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: auto;
+}
+
+
+/* Search input is always visible with a fixed width */
+.search-input {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #2C2F33;
+  color: #FFFFFF;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease, border-radius 0.3s ease; /* Added border transition */
+  pointer-events: auto;
+}
+
+/* Border and slight animation on hover */
+.search-input:hover {
+  border: 2px solid #61DAFB; /* Blue border on hover */
+  border-radius: 20px; /* Optional: Maintain the rounded corners */
+}
+
+/* Search icon button (magnifier) */
+.search-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #e7f0f3;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Magnifier icon color change on hover */
+.search-icon:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+  color: #e9f0f2; /* Blue color when hovered */
+}
+
+
+/* Suggestions dropdown */
+.suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 300px;
+  background: #7faee7;
+  border: 1px solid #21A1F1;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+/* Suggestion item */
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+  color: #FFFFFF;
+  transition: background 0.2s;
+}
+
+.suggestions li:hover {
+  background: #21A1F1;
+}
+
