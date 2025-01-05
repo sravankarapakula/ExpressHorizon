@@ -7,6 +7,68 @@ body {
   color: #FFFFFF; /* White text for better contrast */
 }
 
+.login-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  background: #2C2F33;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.login-form h1 {
+  margin-bottom: 20px;
+  color: #61DAFB;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background: #0D1117;
+  color: #FFFFFF;
+}
+
+.login-form button {
+  background: #61DAFB;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #0D1117;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background: #21A1F1;
+}
+
+.error {
+  color: #FF6B6B;
+  margin-bottom: 15px;
+}
+.success {
+  color: #32CD32;
+  margin-bottom: 15px;
+}
+
+.link {
+  color: #61DAFB;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
 /* App container styles */
 .App {
   text-align: center;
@@ -68,11 +130,15 @@ main {
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
 }
 
+/* News item heading hover effect */
 .news-item h2 {
   font-size: 1.2rem;
   font-family: 'Playfair Display', serif;
   color: #FFFFFF; /* White for title text */
   margin: 10px 0;
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+  overflow: hidden; /* Hide any overflow */
+  white-space: nowrap; /* Prevent wrapping */
 }
 
 /* News item heading hover effect */
@@ -80,7 +146,10 @@ main {
   color: #21A1F1; /* Change the color to a brighter cyan */
   text-decoration: underline; /* Underline the heading */
   font-weight: bold; /* Make the heading bold */
+  white-space: normal; /* Allow wrapping on hover */
+  overflow: visible; /* Ensure the full text is visible */
 }
+
 
 .news-item img {
   width: 100%;
